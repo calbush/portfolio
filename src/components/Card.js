@@ -2,9 +2,11 @@ const Card = ({ project }) => {
 
     return(
         <div className='card'>
-            <img src={`${project.image}`} alt='' />
-            <h2>{`${project.title}`}</h2>
-            <div className='project-description'>{`${project.description}`}</div>
+            <img className='card-image' src={`${project.image}`} alt='' />
+            <div className='card-text'>
+                <h2>{`${project.title}`}</h2>
+                <p className='card-description'>{`${project.description}`}</p>
+            </div>
         </div>
     )
 }
