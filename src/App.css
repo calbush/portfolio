@@ -50,25 +50,18 @@ table {
 /**************************************************************/
 
 * {
-    outline-style: dotted;
     font-family: Courier;
     color: white;
-}
-
-main {
-    display: grid;
-    gap: 10px;
-}
-
-h1 {
-    font-weight: bold;
-    font-size: x-large;
+    /*outline-style: dotted;
+    outline-color: red;
+    */
 }
 
 body {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .app {
@@ -80,29 +73,39 @@ body {
     margin-left: 12px;
     margin-right: 12px;
 }
-.section-container {
-    gap: 20px;
-    padding:10px;
-}
 
-.about-container {
-    display: flex;
-    flex-direction: column;
-    background-color: blue;
-}
-
-.about-text {
-    padding: 10px;
-}
-
-.projects-container {
-    background-color: purple;
+h1 {
+    font-weight: bold;
+    font-size: x-large;
+    color: lime;
 }
 
 .header {
     padding: 10px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+}
+
+.nav-buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    color: lime;
+    background-color: darkgray;
+}
+
+.home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+main {
+    display: grid;
     gap: 10px;
 }
 
@@ -111,3 +114,62 @@ body {
     border-radius: 50%;
     box-shadow: 0px 0px 20px 2px white;
 }
+
+.section-container {
+    padding:10px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-text-container {
+    border: 2px solid white;
+    padding: 10px;
+}
+
+.about-text {
+    
+}
+
+.projects-container {
+}
+
+
+
+.projects-content-container {
+    border: 2px solid white;
+    padding: 10px;
+}
+
+.cards-container {
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    align-content: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    border: 2px solid white;
+}
+
+.card-image {
+    max-width: 250px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    border-top: 2px solid white;;
+}
+
