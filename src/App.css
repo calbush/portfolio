@@ -47,14 +47,13 @@ table {
 	border-spacing: 0;
 }
 
-/**************************************************************/
+/*********************** CSS reset above ***************************************/
 
 * {
     font-family: Courier;
-    color: white;
-    /*outline-style: dotted;
-    outline-color: red;
-    */
+    color: white;   
+    /* outline-style: dotted;
+    outline-color: red; */
 }
 
 body {
@@ -66,12 +65,13 @@ body {
 }
 
 .app {
-    max-width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin-left: 12px;
-    margin-right: 12px;
+    max-width: 768px;
+}
+
+.app > * {
+    max-width: 758px;
 }
 
 h1 {
@@ -117,14 +117,16 @@ main {
 .intro-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
     align-items: center;
+    justify-content: center;
+    min-height: 506px;
 }
 
 .profile-picture {
     max-width: 150px;
     border-radius: 50%;
-    box-shadow: 0px 0px 15px 1px white;
+    filter: grayscale(100%);
 }
 
 .intro-text {
@@ -132,39 +134,30 @@ main {
     color: lime;
 }
 
-.about-container {
+.projects {
+    border-top: 2px white solid;
+    min-height: 568px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    gap: 20px;
 }
 
-.about-text-container {
-    border: 2px solid white;
+.projects-header {
     padding: 10px;
-}
-
-.about-text {
-    
 }
 
 .projects-container {
-}
-
-
-
-.projects-content-container {
-    border: 2px solid white;
-    padding: 10px;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
 }
 
 .cards-container {
-    gap: 10px;
+    gap: 100px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fill, 270px);
     align-content: center;
     justify-content: center;
 }
@@ -174,17 +167,37 @@ main {
     flex-direction: column;
     align-items: center;
     max-width: 300px;
-    border: 2px solid white;
+    background-color: rgb(50, 50, 50);
+    box-shadow: 4px 4px 8px 1px rgb(30, 30, 30);
+    outline-style: groove;
+    outline-color: black;
 }
 
 .card-image {
-    max-width: 250px;
+    max-width: 270px;
 }
 
 .card-text {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    
+}
+
+.about-container {
+    padding: 10px;
+    min-height: 530px;
+    border-top: 2px white solid;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-text-container {
+}
+
+.about-text {
+    
 }
 
 footer {
@@ -192,5 +205,14 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 10px;
+}
+
+.logo-holder {
+    display: flex;
+    gap: 10px;
+}
+
+.insta-logo, .github-logo {
+    width: 30px;
 }
 
