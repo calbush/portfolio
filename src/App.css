@@ -99,7 +99,11 @@ h2 {
 
 button {
     color: lime;
-    background-color: darkgray;
+    background-color: rgb(50, 50, 50)
+}
+
+button:focus, button:hover{
+    transform: scale(1.25);
 }
 
 .home-button {
@@ -129,9 +133,30 @@ main {
     filter: grayscale(100%);
 }
 
+.typed {
+    display: inline-block;
+}
+
 .intro-text {
     font-size: 28px;
     color: lime;
+    overflow: hidden;
+    width: 0;
+    white-space: nowrap;
+    border-right: 3px solid lime;
+    animation: 
+        typing 2.5s steps(40, end) forwards,
+        blink-caret 1s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent}
+    50% { border-color: lime }
 }
 
 .projects {
@@ -177,11 +202,14 @@ main {
     max-width: 270px;
 }
 
+.card:hover {
+    transform: scale(103%);
+}
+
 .card-text {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    
 }
 
 .about-container {
@@ -193,17 +221,11 @@ main {
     gap: 30px;
 }
 
-.about-text-container {
-}
-
-.about-text {
-    
-}
 
 footer {
     border-top: 2px solid white;;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 10px;
 }
 
@@ -214,5 +236,10 @@ footer {
 
 .insta-logo, .github-logo {
     width: 30px;
+}
+
+.insta-logo:hover, .github-logo:hover,
+.insta-logo:focus, .github-logo:focus {
+    transform: scale(1.5);
 }
 
