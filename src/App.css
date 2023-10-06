@@ -56,6 +56,10 @@ table {
     outline-color: red; */
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     display: flex;
     align-items: center;
