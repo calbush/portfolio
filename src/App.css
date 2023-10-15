@@ -77,6 +77,7 @@ body {
     max-width: 95vw;
 }
 
+
 h1 {
     font-weight: bold;
     font-size: xx-large;
@@ -114,6 +115,7 @@ button:focus, button:hover{
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    color: white;
 }
 
 main {
@@ -198,6 +200,12 @@ main {
     box-shadow: 4px 4px 8px 1px rgb(30, 30, 30);
     outline-style: groove;
     outline-color: black;
+}
+
+.icons {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    align-self: flex-end;
 }
 
 .card:hover {
