@@ -51,12 +51,12 @@ table {
 
 * {
     font-family: Courier;
-    color: white;   
+      
     /* outline-style: dotted;
     outline-color: red; */
 }
 
-a {
+.no-underline-link {
     text-decoration: none;
 }
 
@@ -71,11 +71,10 @@ body {
 .app {
     display: flex;
     flex-direction: column;
-    max-width: 768px;
 }
 
 .app > * {
-    max-width: 758px;
+    max-width: 95vw;
 }
 
 h1 {
@@ -186,7 +185,7 @@ main {
 .cards-container {
     gap: 100px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 270px);
+    grid-template-rows: repeat(auto, 1fr);
     align-content: center;
     justify-content: center;
 }
@@ -195,15 +194,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 300px;
     background-color: rgb(50, 50, 50);
     box-shadow: 4px 4px 8px 1px rgb(30, 30, 30);
     outline-style: groove;
     outline-color: black;
-}
-
-.card-image {
-    max-width: 270px;
 }
 
 .card:hover {
@@ -216,6 +210,10 @@ main {
     padding: 10px;
 }
 
+.card-description {
+    color: white;
+}
+
 .about-container {
     padding: 10px;
     min-height: 530px;
@@ -223,6 +221,16 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+.about-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-text {
+    color: white;
 }
 
 
@@ -247,3 +255,22 @@ footer {
     transform: scale(1.5);
 }
 
+@media all and (width > 600px) {
+    .card {
+        max-width: 550px;
+    }
+
+    .card-image {
+        max-width: 550px;
+    }
+}
+
+@media all and (width <= 600px){
+    .card-image {
+        max-width: 330px;
+    }
+
+    .card {
+        max-width: 330px;
+    }
+}
