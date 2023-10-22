@@ -154,6 +154,10 @@ main {
         blink-caret 1s step-end infinite;
 }
 
+.section {
+    min-height: 100vh;
+}
+
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
